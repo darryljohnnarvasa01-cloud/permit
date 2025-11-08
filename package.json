@@ -1,0 +1,12 @@
+{
+  "name": "motorela-permit-system",
+  "version": "1.0.0",
+  "description": "Valencia City Motorela Permit System",
+  "scripts": {
+    "build": "npx tailwindcss -i ./public/css/input.css -o ./public/css/tailwind.css --minify",
+    "watch": "npx tailwindcss -i ./public/css/input.css -o ./public/css/tailwind.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}

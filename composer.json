@@ -1,0 +1,16 @@
+{
+    "name": "valencia-city/motorela-permit-system",
+    "description": "Motorela Registration & Renewal Permit System for Valencia City",
+    "type": "project",
+    "require": {
+        "php": ">=7.4",
+        "phpmailer/phpmailer": "^6.8",
+        "endroid/qr-code": "^4.8",
+        "tecnickcom/tcpdf": "^6.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}

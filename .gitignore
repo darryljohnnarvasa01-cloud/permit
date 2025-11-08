@@ -1,0 +1,12 @@
+vendor/
+node_modules/
+.env
+public/uploads/requirements/*
+public/uploads/receipts/*
+public/qr/qr_images/*
+!public/uploads/requirements/.gitkeep
+!public/uploads/receipts/.gitkeep
+!public/qr/qr_images/.gitkeep
+*.log
+.DS_Store
+Thumbs.db

@@ -1,0 +1,50 @@
+====================================
+DATABASE UPDATE INSTRUCTIONS
+====================================
+
+To enable the new payment features, you need to run the database migration.
+
+METHOD 1: Using phpMyAdmin
+---------------------------
+1. Open phpMyAdmin in your browser (usually http://localhost/phpmyadmin)
+2. Select the 'motorela_permit_db' database from the left sidebar
+3. Click on the "SQL" tab at the top
+4. Open the file: database/migrations/add_payment_method.sql
+5. Copy all the SQL code from that file
+6. Paste it into the SQL query box in phpMyAdmin
+7. Click "Go" button to execute
+
+METHOD 2: Using MySQL Command Line
+-----------------------------------
+1. Open Command Prompt (Windows) or Terminal (Mac/Linux)
+2. Navigate to the permit project folder:
+   cd C:\xampp\htdocs\permit
+3. Run this command:
+   mysql -u root -p motorela_permit_db < database/migrations/add_payment_method.sql
+4. Press Enter (if prompted for password, just press Enter if no password)
+
+METHOD 3: Using XAMPP Shell
+----------------------------
+1. Open XAMPP Control Panel
+2. Click "Shell" button
+3. Type: cd htdocs/permit
+4. Type: mysql -u root motorela_permit_db < database/migrations/add_payment_method.sql
+5. Press Enter
+
+VERIFY THE UPDATE
+-----------------
+After running the migration, verify it worked:
+1. Open phpMyAdmin
+2. Go to motorela_permit_db database
+3. Click on "motorela_permits" table
+4. Click "Structure" tab
+5. Look for the "payment_method" column - it should be there!
+
+TROUBLESHOOTING
+---------------
+If you get an error about "column already exists", that's okay! 
+It means the column was already added. You can proceed to use the system.
+
+====================================
+DONE! You can now use the payment features.
+====================================
